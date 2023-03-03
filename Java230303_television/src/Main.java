@@ -9,7 +9,7 @@ public class Main {
         int ch = myTV.getChannel(); // 채널 값을 불러오는 메소드의 return 값을 ch 변수에 저장
         System.out.println("현재 채널은 " + ch + "입니다. ");
 
-        Television yourTV = new Television();
+        Television yourTV = new Television(); // 새로운 Television 변수 생성
         yourTV.channel = 9;
         yourTV.volume = 12;
         yourTV.isOn = true;
