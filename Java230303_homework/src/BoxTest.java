@@ -1,3 +1,5 @@
+// 클래스 Box의 필드를 출력하는 객체를 생성하여 해당 정보 출력
+
 public class BoxTest {
     public static void main(String[] args) {
         Box box = new Box();
