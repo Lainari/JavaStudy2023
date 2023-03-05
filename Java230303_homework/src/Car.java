@@ -7,8 +7,8 @@ public class Car {
     int speed;    // 현재 속도
     int gear;     // 현재 기어
 
-    @Override
-    public String toString(){
+    @Override         // Override : 변수나 메소드의 내용을 변경할 수 있으며 동일한 메소드 호출에도 각 개체 마다 다른 생동이 가능
+    public String toString(){   // toString() 메소드는 필드의 값을 하나의 문자열로 만들어서 반환함
         return "Car [color = " + color + ", speed = " + speed + ", gear = " + gear + "]";
     }
 
