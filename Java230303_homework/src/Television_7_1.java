@@ -11,6 +11,7 @@ public class Television_7_1 {
         return channel;
     }
 
+    // 매개변수를 가지는 메소드 setChannel()
     void setChannel(int argCh){
         channel = argCh;
     }
