@@ -17,8 +17,12 @@ public class StringTest {
 
         // 문제 2. new 연산자를 사용한다면?
         String s3 = new String("동해물과 백두산이");    // new 연산자를 통해 새로운 주소값을 할당시켜줌
-        boolean r1 = s1 == s3;   // s1 주소값과 s3 주소값은 다름
-        System.out.println(r1);
+        r = s1 == s3;   // s1 주소값과 s3 주소값은 다름
+        System.out.println(r);
         // 결과 : false
+
+        // 문자열 비교할 때는 equals() 메소드를 사용할 것
+        r = s3.equals(s1);
+        System.out.println(r);
     }
 }
