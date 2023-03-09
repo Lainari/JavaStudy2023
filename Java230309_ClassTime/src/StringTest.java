@@ -24,5 +24,42 @@ public class StringTest {
         // 문자열 비교할 때는 equals() 메소드를 사용할 것
         r = s3.equals(s1);
         System.out.println(r);
+
+        // 대소문자를 무시하고 비교할 때는 equalsIgnoreCase() 메소드를 사용할 것
+        s1 = new String("I love you");
+        s2 = new String("I Love you");
+        r = s1.equals(s2);
+        System.out.println(r); // 결과 : false
+        r = s1.equalsIgnoreCase(s2);
+        System.out.println(r); // 결과 : true
+
+        // String 객체는 immutable 입니다. mutable 이 아닙니다.
+        // 이 말은 String 객체의 값은 변경할 수 없다 라는 의미입니다.
+
+        String proverb = "A barking dog";
+        System.out.println(proverb.length());
+        proverb.concat(" never Bites!"); // concat(); -> 주어진 문자열을 현재의 문자열 뒤에 붙인다
+        System.out.println(proverb);
+        // 결과 : "A barking dog"
+
+        // String 객체의 값을 변경하고 싶다면? 새로운 객체로 만들어야 한다
+        s1 = proverb.concat(" never Bites!");
+        System.out.println(s1);
+        // 결과 : "A barking dog never Bites!"
+
+        // 대문자를 소문자로 바꿔볼까요
+        s2 = proverb.replace("b","B");
+        System.out.println(s2);
+        // 결과 : "A Barking dog"
+
+        // String 의 특정 index 범위 만큼 출력하고 싶어요
+        s3 = proverb.substring(2, 3); // argNum 2 = start, argNum 3 = end.
+        System.out.println(s3);
+        // 결과 : "b" (index num 2 = b, index num 3 = i)
+
+        // 모든 단어를 대문자로 변경하고 싶어요
+        String s4 = proverb.toUpperCase();
+        System.out.println(s4);
+        // 결과 : "A BARKING DOG"
     }
 }
