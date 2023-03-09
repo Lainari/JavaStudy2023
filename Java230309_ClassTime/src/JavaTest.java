@@ -8,7 +8,7 @@ public class JavaTest {
     }
 
     // static method
-    // instance로 생성하지 않아도 접근이 가능한 매소드
+    // instance 로 생성하지 않아도 접근이 가능한 매소드
     static void sayHello(){
         System.out.println("Hiiiiiii");
     }
