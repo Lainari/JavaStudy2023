@@ -61,5 +61,29 @@ public class StringTest {
         String s4 = proverb.toUpperCase();
         System.out.println(s4);
         // 결과 : "A BARKING DOG"
+
+
+        // 문자열의 결합
+        int x = 20;
+        System.out.println("결과값은 " + x);
+        // 원래는 String 형과 int 형은 결합할 수 없지만, JVM 에서 자동으로 변환하여 결합할 수 있도록 형 변환 해준다
+
+        System.out.println("100" + 20); // 결과 : "10020"
+        // int 형을 String 으로 변환하여 결합
+
+        System.out.println(100 + x); // 결과 : "120"
+        // int 끼리 연산하고 String 으로 변환
+
+
+        // 문자열을 수치값으로 변환
+        s = "1234";
+        Integer n = Integer.parseInt(s);
+        System.out.println(n.getClass().getSimpleName());
+        Double d = Double.parseDouble(s);
+        System.out.println(d.getClass().getSimpleName());
+        Float f = Float.parseFloat(s);
+        System.out.println(f.getClass().getSimpleName());
+        Long l = Long.parseLong(s);
+        System.out.println(l.getClass().getSimpleName());
     }
 }
