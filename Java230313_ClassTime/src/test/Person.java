@@ -11,13 +11,24 @@ public class Person {
     * 이렇게 함으로써 member variable 에 잘못된 값이 설정되는 것을 막을 수도 있고
     * 향후에 그 클래스를 버전업하면서 member variable 의 이름을 변경해도
     * 그 클래스를 사용하는 외부 클래스에는 아무 영향을 미치지 않게 된다.
+    *
+    * 접근제어지정자(Access Modifier)
+    *  : public, protected, default, private
+    *  public 이 명시된 member (variable, method)는 그 클래스 내부, 외부 어느 곳에서든 접근 가능하다
+    *  protected 가 명시된 member (variable, method)는 그 클래스 내부,
+    *               그 클래스의 자식, 그리고 그 클래스와 같은 패키지에 속한 다른 클래스에서도 접근 가능하다
+    *  접근제어지정자가 명시되지 않은 경우, 이를 default 접근제어지정자다 라고한다.
+    *  default 접근제어지정자가 명시된 member 는 그 클래스 내부, 그리고 그 클래스와 같은 패키지에 속한
+    *                        다른 클래스에서도 접근 가능하다. (protected 와 다르게, 상속 지원이 불가능)
+    *
     * */
     private String name = "홍길동";   // 멤버 변수는 거의 무조건 private 로 숨겨놓자!
     private int myAge;
     // private 로 숨겨놓은 멤버 변수는 이름을 바꾼다면 이 클래스에서만 다 바꾸면 된다.
     // 따로 호출한 클래스에서 변수 이름을 바꿀 필요가 없어서 훨씬 더 편하다
 
-    private String dept = "컴정"; 
+    private String dept = "컴정";
+    protected String dept2 = "컴퓨터정보계열";
 
     public String getDept(){
         return dept;
