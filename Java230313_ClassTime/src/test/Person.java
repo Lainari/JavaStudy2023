@@ -1,11 +1,11 @@
 package test;
 
 public class Person {
-    private String name;
+    private String name;   // 멤버 변수는 거의 무조건 private 로 숨겨놓자!
     private int age;
 
     public String getName(){
-        return name;
+        return name;       // private 멤버 변수는 public 메소드로 접근할 수 있도록 해주자
     }
 
     public int getAge(){
