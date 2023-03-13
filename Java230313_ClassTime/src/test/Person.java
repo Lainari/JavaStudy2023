@@ -12,13 +12,22 @@ public class Person {
     * 향후에 그 클래스를 버전업하면서 member variable 의 이름을 변경해도
     * 그 클래스를 사용하는 외부 클래스에는 아무 영향을 미치지 않게 된다.
     * */
-    private String name;   // 멤버 변수는 거의 무조건 private 로 숨겨놓자!
+    private String name = "홍길동";   // 멤버 변수는 거의 무조건 private 로 숨겨놓자!
     private int myAge;
     // private 로 숨겨놓은 멤버 변수는 이름을 바꾼다면 이 클래스에서만 다 바꾸면 된다.
     // 따로 호출한 클래스에서 변수 이름을 바꿀 필요가 없어서 훨씬 더 편하다
+
+    private String dept = "컴정"; 
+
+    public String getDept(){
+        return dept;
+    }
     public String getName(){
         return name;       // private 멤버 변수는 public 메소드로 접근할 수 있도록 해주자
     }
+    // name 과 dept 는 private 로 만들었기에 외부 클래스에서 접근하려면 public 메소드로만 가능하다
+    // 하지만 get 메소드만 있지, set 은 없기에 이들은 수정이 불가능한 멤버 변수가 된다
+    // 따라서 이는 읽기 전용 맴버 변수가 된다
 
     public int getAge(){
         return myAge;
