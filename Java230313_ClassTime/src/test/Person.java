@@ -1,6 +1,17 @@
 package test;
 
 public class Person {
+    /*
+    * member variable 은 특별한 이유가 없는 한 private 로 만들어라.
+    * 그 member variable 을 클래스 외부에서 접근해야 한다면 그를 위한
+    * method 를 public 으로 구현하라
+    * 예를 들어, myAge 라는 member variable 에 값을 설정해야 하는 메소드는
+    * setAge() 로, myAge 라는 member variable 의 값을 읽어오는 메소드는 getAge() 로
+    * public 접근제어지정자를 명시하여 구현하면 된다.
+    * 이렇게 함으로써 member variable 에 잘못된 값이 설정되는 것을 막을 수도 있고
+    * 향후에 그 클래스를 버전업하면서 member variable 의 이름을 변경해도
+    * 그 클래스를 사용하는 외부 클래스에는 아무 영향을 미치지 않게 된다.
+    * */
     private String name;   // 멤버 변수는 거의 무조건 private 로 숨겨놓자!
     private int myAge;
     // private 로 숨겨놓은 멤버 변수는 이름을 바꾼다면 이 클래스에서만 다 바꾸면 된다.
